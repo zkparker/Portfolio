@@ -1,5 +1,5 @@
 .hero {
-  font-family: Roboto, serif;
+  font-family: "Roboto", Serif;
   text-align: center;
   min-height: 800px;
   background-size: cover;
@@ -16,8 +16,72 @@
   .hero.landscape {
     color: white; }
   .hero.bridge {
-    background-image: url("../img/bridge/Bridge.jpg");
+    background-image: url("../img/bridge/full-width.jpg");
     width: 100%; }
+
+.sidebar-wrapper {
+  color: white;
+  font-family: "Roboto", Serif;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2;
+  position: fixed;
+  width: 0px;
+  height: 100%;
+  background: #000;
+  transition: all 0.5s ease; }
+  .sidebar-wrapper a {
+    color: white;
+    margin-left: 10px;
+    font-size: 24px; }
+  .sidebar-wrapper h2 {
+    padding: 0px;
+    margin: 4px;
+    font-size: 40px;
+    line-height: 40px; }
+  .sidebar-wrapper.open {
+    width: 320px !important; }
+
+.sidebar-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#close-btn {
+  align-self: flex-start;
+  margin-left: 30px;
+  margin-top: 10px;
+  color: white;
+  cursor: pointer; }
+  #close-btn:hover {
+    opacity: .5; }
+  #close-btn img {
+    width: 30px;
+    height: 30px; }
+
+#hamburger {
+  display: flex;
+  cursor: pointer;
+  position: fixed;
+  height: 34px;
+  width: 40px;
+  left: 30px;
+  top: 20px;
+  z-index: 1;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px; }
+  #hamburger img {
+    width: 30px;
+    height: 30px; }
+  #hamburger:hover {
+    background: #00CFFF; }
 
 #intro h1, #intro h5 {
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25); }
@@ -31,7 +95,7 @@
 
 .cta {
   background: black;
-  text-color: white;
+  color: white;
   padding: 0px;
   width: 180px;
   font-size: 18px;
@@ -40,26 +104,26 @@
   border-radius: 4px;
   cursor: pointer; }
   .cta:hover {
-    color: #00CFFF; }
+    background: #00CFFF; }
 
 #about {
   min-height: 0; }
 
 .left-col {
-  color: #00CFFF;
+  color: #00E2AC;
   padding: 20px;
   text-transform: uppercase;
   text-align: right; }
   .left-col h2 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 60px;
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 55px; }
 
 .right-col {
-  padding: 20px;
-  text-align: right; }
+  text-align: left;
+  padding: 20px; }
   .right-col h5 {
     font-size: 24px;
     line-height: 30px; }
@@ -72,27 +136,24 @@
 
 .col-md-4 {
   overflow: hidden;
-  padding-top: 0;
-  padding-right: 5px;
-  padding-bottom: 10px;
-  padding-left: 5px; }
+  padding: 0 5px 10px 5px; }
   .col-md-4 img {
     height: 100%;
     max-width: 390px;
-    max-height: 380px; }
+    max-height: 280px; }
 
 #contact {
   text-align: center; }
   #contact p {
     text-align: center;
-    font-size: 24px;
     max-width: 740px;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    font-size: 24px; }
 
 #social {
   padding: 20px; }
   #social a {
-    margin: 0px 10px 0px 10px;
+    margin: 0 10px 0 10px;
     text-decoration: none; }
   #social img {
     height: 20px; }
@@ -103,11 +164,11 @@
   height: 40px;
   margin-left: 10%;
   margin-right: 10%;
-  padding-bottom: 150px;
   width: 100%;
+  padding-bottom: 150px;
+  align-items: center;
   display: flex;
-  flex-direction: row;
-  align-items: center; }
+  flex-direction: row; }
   #footer .footer-item {
     max-width: 100px;
     text-align: left; }
@@ -116,8 +177,8 @@
     margin-left: 5px;
     padding: 0px;
     font-size: 16px;
-    color: black;
-    line-height: 40px; }
+    line-height: 40px;
+    color: black; }
 
 #copyright {
   margin-left: auto;
@@ -138,20 +199,17 @@
   #footer {
     margin-left: 20px;
     margin-right: 20px; }
-
-  #footer h4 {
-    padding-right: 20px; } }
+    #footer h4 {
+      padding-right: 20px; } }
 @media only screen and (max-width: 992px) {
   .row {
     width: 100%; }
 
   .col-md-4 {
     width: 100%; }
-
-  .col-md-4 img {
-    width: 100%;
-    height: auto;
-    max-width: 992px;
-    max-height: 900px; } }
+    .col-md-4 img {
+      width: 100%;
+      max-width: 992px;
+      max-height: 900px; } }
 
 /*# sourceMappingURL=main.css.map */
